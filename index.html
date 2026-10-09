@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PF-017 // Pedro Furtado</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=VT323&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- EFEITOS CRT -->
+    <div class="crt-lines"></div>
+    <div class="crt-noise"></div>
+
+    <!-- ALERTA -->
+    <div id="systemAlert" class="system-alert">
+        <span id="alertText">SYSTEM CHECK COMPLETE</span>
+    </div>
+
+    <!-- HEADER -->
+    <header class="ship-header">
+
+        <div class="ship-id">
+            <span class="blink">●</span>
+
+            <div>
+                <strong>PEDRO-01</strong>
+                <small>FLIGHT COMPUTER // SERIES 1986</small>
+            </div>
+        </div>
+
+        <div class="header-status">
+            <span>SYS ONLINE</span>
+        </div>
+
+        <div class="language-box">
+
+            <button id="languageButton" class="language-button">
+                🌐 PT
+            </button>
+
+            <div id="languageMenu" class="language-menu">
+
+                <button data-language="pt">🇧🇷 PORTUGUÊS</button>
+                <button data-language="en">🇺🇸 ENGLISH</button>
+                <button data-language="es">🇪🇸 ESPAÑOL</button>
+
+            </div>
+
+        </div>
+
+        <button id="themeToggle" class="theme-button">
+            ◐ THEME
+        </button>
+
+        <button id="menuToggle" class="menu-toggle">
+            ☰
+        </button>
+
+    </header>
+
+    <!-- MENU -->
+    <nav id="navbar" class="navigation">
+
+        <a href="#inicio" data-i18n="navCommand">COMMAND</a>
+        <a href="#sobre" data-i18n="navCrew">CREW</a>
+        <a href="#habilidades" data-i18n="navSystems">SYSTEMS</a>
+        <a href="#projetos" data-i18n="navMissions">MISSIONS</a>
+        <a href="#contato" data-i18n="navContact">COMMUNICATION</a>
+
+    </nav>
+
+    <main>
+
+        <!-- HERO -->
+        <section id="inicio" class="hero section">
+
+            <div class="main-console parallax">
+
+                <div class="terminal-top">
+                    <span>TERMINAL // PF-017</span>
+                    <span id="clock">00:00:00</span>
+                </div>
+
+                <div class="boot-text">
+                    > BOOTING PORTFOLIO SYSTEM...<br>
+                    > LOADING CREW DATABASE...<br>
+                    > CONNECTION ESTABLISHED...<br>
+                    > WELCOME, USER.
+                </div>
+
+                <div class="hero-content">
+
+                    <span class="eyebrow" data-i18n="heroEyebrow">
+                        DIGITAL PROFILE DETECTED
+                    </span>
+
+                    <h1>
+                        PEDRO<br>
+                        <span>FURTADO</span>
+                    </h1>
+
+                    <div class="typing-line">
+                        > <span id="typingText"></span><span class="cursor">█</span>
+                    </div>
+
+                    <p data-i18n="heroText">
+                        Estudante de Tecnologia da Informação,
+                        desenvolvendo soluções através de programação,
+                        desenvolvimento web e projetos digitais.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="#projetos" class="retro-button" data-i18n="viewMissions">
+                            VIEW MISSIONS
+                        </a>
+
+                        <a href="#contato" class="retro-button outline" data-i18n="contact">
+                            CONTACT
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="coordinates">
+                    <span>POS-X: 017</span>
+                    <span>POS-Y: 076</span>
+                    <span>SECTOR: BH</span>
+                </div>
+
+            </div>
+
+            <!-- RADAR -->
+            <div class="radar-panel reveal">
+
+                <div class="panel-title">
+                    <span>RADAR // ACTIVE</span>
+                    <span class="green">●</span>
+                </div>
+
+                <div id="radar" class="radar">
+
+                    <div class="radar-cross horizontal"></div>
+                    <div class="radar-cross vertical"></div>
+
+                    <div class="radar-circle circle-one"></div>
+                    <div class="radar-circle circle-two"></div>
+
+                    <div class="radar-sweep"></div>
+
+                    <div id="radarTarget" class="radar-target">
+                        ●
+                    </div>
+
+                </div>
+
+                <div id="radarCoordinates" class="radar-coordinates">
+                    TARGET: PF-017<br>
+                    DISTANCE: 0007 KM<br>
+                    SIGNAL: 98%
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- STATUS -->
+        <section class="status-section">
+
+            <div class="status-item reveal">
+                <span>CPU</span>
+
+                <div class="status-bar">
+                    <span style="width: 82%"></span>
+                </div>
+
+                <strong>82%</strong>
+            </div>
+
+            <div class="status-item reveal">
+                <span>MEMORY</span>
+
+                <div class="status-bar">
+                    <span style="width: 67%"></span>
+                </div>
+
+                <strong>67%</strong>
+            </div>
+
+            <div class="status-item reveal">
+                <span>NETWORK</span>
+
+                <div class="status-bar">
+                    <span style="width: 94%"></span>
+                </div>
+
+                <strong>94%</strong>
+            </div>
+
+        </section>
+
+        <!-- SOBRE -->
+        <section id="sobre" class="section">
+
+            <div class="section-header reveal">
+                <span>01 // CREW DATABASE</span>
+                <h2 data-i18n="aboutTitle">ABOUT ME</h2>
+            </div>
+
+            <div class="crew-layout">
+
+                <div class="crew-card reveal">
+
+                    <div class="crew-photo">
+                        PF
+                    </div>
+
+                    <div class="crew-info">
+
+                        <h3>PF-017</h3>
+
+                        <p>
+                            STATUS:
+                            <span class="green">ACTIVE</span>
+                        </p>
+
+                        <p>AGE: 17</p>
+                        <p>ROLE: IT STUDENT</p>
+                        <p>BASE: COTEMIG</p>
+
+                    </div>
+
+                </div>
+
+                <div class="about-text reveal">
+
+                    <span class="terminal-label">
+                        > CREW PROFILE:
+                    </span>
+
+                    <p data-i18n="aboutText">
+                        Meu nome é Pedro Furtado, tenho 17 anos e sou
+                        estudante de Tecnologia da Informação, atualmente
+                        cursando o segundo ano do Ensino Médio Técnico
+                        no COTEMIG.
+                    </p>
+
+                    <p data-i18n="aboutText2">
+                        Durante minha formação, venho desenvolvendo
+                        conhecimentos em programação, desenvolvimento web
+                        e criação de projetos digitais, buscando transformar
+                        ideias em soluções funcionais e criativas.
+                    </p>
+
+                    <p data-i18n="aboutText3">
+                        Meu objetivo profissional é continuar evoluindo
+                        na área de TI, adquirindo experiência e construindo
+                        projetos que representem minha evolução como
+                        desenvolvedor.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- CONTADORES -->
+        <section class="stats-section reveal">
+
+            <div class="stat">
+                <strong class="counter" data-target="8">0</strong>
+                <span data-i18n="statSkills">SKILLS</span>
+            </div>
+
+            <div class="stat">
+                <strong class="counter" data-target="3">0</strong>
+                <span data-i18n="statProjects">MISSIONS</span>
+            </div>
+
+            <div class="stat">
+                <strong class="counter" data-target="100">0</strong>
+                <span>%</span>
+                <small data-i18n="statLearning">LEARNING</small>
+            </div>
+
+        </section>
+
+        <!-- HABILIDADES -->
+        <section id="habilidades" class="section">
+
+            <div class="section-header reveal">
+                <span>02 // SYSTEMS DATABASE</span>
+                <h2 data-i18n="skillsTitle">SYSTEMS</h2>
+            </div>
+
+            <div class="systems-grid">
+
+                <article class="system-card reveal">
+                    <div class="system-number">SYS-01</div>
+                    <div class="system-icon">HW</div>
+
+                    <h3>HARDWARE</h3>
+
+                    <p data-i18n="skillHardware">
+                        Conhecimentos em hardware,
+                        software e ambientes computacionais.
+                    </p>
+
+                    <div class="system-progress">
+                        <span style="width: 80%"></span>
+                    </div>
+
+                    <small>SYSTEM: OPERATIONAL</small>
+                </article>
+
+                <article class="system-card reveal">
+                    <div class="system-number">SYS-02</div>
+                    <div class="system-icon">C#</div>
+
+                    <h3>C#</h3>
+
+                    <p data-i18n="skillCsharp">
+                        Lógica de programação e desenvolvimento
+                        de aplicações utilizando C#.
+                    </p>
+
+                    <div class="system-progress">
+                        <span style="width: 75%"></span>
+                    </div>
+
+                    <small>SYSTEM: OPERATIONAL</small>
+                </article>
+
+                <article class="system-card reveal">
+                    <div class="system-number">SYS-03</div>
+                    <div class="system-icon">HTML</div>
+
+                    <h3>HTML</h3>
+
+                    <p data-i18n="skillHtml">
+                        Estruturação de páginas e desenvolvimento
+                        de projetos para web.
+                    </p>
+
+                    <div class="system-progress">
+                        <span style="width: 78%"></span>
+                    </div>
+
+                    <small>SYSTEM: OPERATIONAL</small>
+                </article>
+
+                <article class="system-card reveal">
+                    <div class="system-number">SYS-04</div>
+                    <div class="system-icon">JS</div>
+
+                    <h3>JAVASCRIPT</h3>
+
+                    <p data-i18n="skillJavascript">
+                        Desenvolvimento de interações,
+                        funcionalidades e comportamentos dinâmicos.
+                    </p>
+
+                    <div class="system-progress">
+                        <span style="width: 65%"></span>
+                    </div>
+
+                    <small>SYSTEM: LEARNING</small>
+                </article>
+
+                <article class="system-card reveal">
+                    <div class="system-number">SYS-05</div>
+                    <div class="system-icon">G</div>
+
+                    <h3>GOOGLE TOOLS</h3>
+
+                    <p data-i18n="skillGoogle">
+                        Conhecimentos em ferramentas Google
+                        em nível básico e intermediário.
+                    </p>
+
+                    <div class="system-progress">
+                        <span style="width: 85%"></span>
+                    </div>
+
+                    <small>SYSTEM: OPERATIONAL</small>
+                </article>
+
+                <article class="system-card reveal">
+                    <div class="system-number">SYS-06</div>
+                    <div class="system-icon">MS</div>
+
+                    <h3>OFFICE 365</h3>
+
+                    <p data-i18n="skillOffice">
+                        Conhecimentos no pacote Microsoft
+                        Office 365.
+                    </p>
+
+                    <div class="system-progress">
+                        <span style="width: 82%"></span>
+                    </div>
+
+                    <small>SYSTEM: OPERATIONAL</small>
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- SCAN -->
+        <section class="scan-section reveal">
+
+            <div>
+                <span>DIAGNOSTIC SYSTEM</span>
+
+                <h2 data-i18n="scanTitle">
+                    RUN SYSTEM SCAN
+                </h2>
+
+                <p data-i18n="scanText">
+                    Execute uma análise completa dos sistemas
+                    disponíveis neste terminal.
+                </p>
+            </div>
+
+            <button id="scanButton" class="retro-button">
+                🔍 SCAN SYSTEM
+            </button>
+
+        </section>
+
+        <!-- TERMINAL -->
+        <section class="interactive-terminal reveal">
+
+            <div class="terminal-header">
+                <span>COMMAND TERMINAL</span>
+                <span>READY</span>
+            </div>
+
+            <div id="terminalOutput" class="terminal-output">
+                <p>> TERMINAL INITIALIZED</p>
+                <p>> TYPE <strong>HELP</strong> TO VIEW COMMANDS</p>
+            </div>
+
+            <div class="terminal-input">
+                <span>></span>
+
+                <input
+                    id="terminalInput"
+                    type="text"
+                    autocomplete="off"
+                    placeholder="TYPE COMMAND..."
+                >
+            </div>
+
+        </section>
+
+        <!-- PROJETOS -->
+        <section id="projetos" class="section">
+
+            <div class="section-header reveal">
+                <span>03 // MISSION DATABASE</span>
+                <h2 data-i18n="projectsTitle">MISSIONS</h2>
+            </div>
+
+            <div class="missions-grid">
+
+                <article class="mission-card reveal">
+
+                    <div class="mission-top">
+                        <span>MISSION-01</span>
+                        <span>COMPLETE</span>
+                    </div>
+
+                    <h3>VELOX BIKE</h3>
+
+                    <p data-i18n="projectVelox">
+                        Landing page para uma loja de bicicletas,
+                        utilizando HTML, CSS e prototipação visual
+                        no Figma.
+                    </p>
+
+                    <div class="tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>FIGMA</span>
+                    </div>
+
+                    <button
+                        class="mission-button"
+                        data-title="VELOX BIKE"
+                        data-description="Landing page desenvolvida para uma loja de bicicletas, com foco em estrutura HTML, estilização CSS e prototipação visual."
+                        data-i18n="viewMission">
+                        VIEW MISSION
+                    </button>
+
+                </article>
+
+                <article class="mission-card reveal">
+
+                    <div class="mission-top">
+                        <span>MISSION-02</span>
+                        <span>COMPLETE</span>
+                    </div>
+
+                    <h3>C# SYSTEM</h3>
+
+                    <p data-i18n="projectCsharp">
+                        Sistema desenvolvido com C# e Windows Forms,
+                        trabalhando interfaces, lógica e
+                        funcionalidades.
+                    </p>
+
+                    <div class="tags">
+                        <span>C#</span>
+                        <span>WINFORMS</span>
+                    </div>
+
+                    <button
+                        class="mission-button"
+                        data-title="C# SYSTEM"
+                        data-description="Sistema desenvolvido com C# e Windows Forms, explorando interfaces gráficas e lógica de programação."
+                        data-i18n="viewMission">
+                        VIEW MISSION
+                    </button>
+
+                </article>
+
+                <article class="mission-card reveal">
+
+                    <div class="mission-top">
+                        <span>MISSION-03</span>
+                        <span>ACTIVE</span>
+                    </div>
+
+                    <h3>WEB PROJECTS</h3>
+
+                    <p data-i18n="projectWeb">
+                        Desenvolvimento de páginas web utilizando
+                        HTML e CSS, explorando estrutura,
+                        design e responsividade.
+                    </p>
+
+                    <div class="tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>WEB</span>
+                    </div>
+
+                    <button
+                        class="mission-button"
+                        data-title="WEB PROJECTS"
+                        data-description="Projetos web desenvolvidos durante a formação, explorando HTML, CSS, estrutura de páginas e responsividade."
+                        data-i18n="viewMission">
+                        VIEW MISSION
+                    </button>
+
+                </article>
+
+            </div>
+
+            <!-- GITHUB -->
+            <div class="github-terminal reveal">
+
+                <div>
+                    <span>EXTERNAL DATABASE</span>
+                    <h3>GITHUB</h3>
+                </div>
+
+                <a href="#" id="githubLink" data-i18n="accessGithub">
+                    ACCESS DATABASE →
+                </a>
+
+            </div>
+
+        </section>
+
+        <!-- CONTATO -->
+        <section id="contato" class="section">
+
+            <div class="section-header reveal">
+                <span>04 // COMMUNICATION SYSTEM</span>
+                <h2 data-i18n="contactTitle">CONTACT</h2>
+            </div>
+
+            <div class="contact-layout">
+
+                <div class="contact-info reveal">
+
+                    <div class="communication-status">
+
+                        <span class="green">●</span>
+
+                        <div>
+                            <strong data-i18n="signalActive">
+                                SIGNAL ACTIVE
+                            </strong>
+
+                            <small data-i18n="available">
+                                AVAILABLE FOR COMMUNICATION
+                            </small>
+                        </div>
+
+                    </div>
+
+                    <div class="contact-data">
+
+                        <div>
+                            <span>EMAIL</span>
+                            <a href="mailto:pedrofurtadocastro@icloud.com">
+                                pedrofurtadocastro@icloud.com
+                            </a>
+                        </div>
+
+                        <div>
+                            <span>PHONE</span>
+                            <a href="tel:+5531971819389">
+                                (31) 97181-9389
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <div class="signal-bars">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                </div>
+
+                <!-- FORMULÁRIO -->
+                <form id="contactForm" class="contact-form reveal">
+
+                    <label for="name" data-i18n="formName">
+                        NAME *
+                    </label>
+
+                    <input
+                        id="name"
+                        name="name"
+                        type="text"
+                        required
+                        placeholder="YOUR NAME">
+
+                    <label for="phone" data-i18n="formPhone">
+                        PHONE *
+                    </label>
+
+                    <input
+                        id="phone"
+                        name="phone"
+                        type="tel"
+                        required
+                        maxlength="15"
+                        placeholder="(31) 99999-9999">
+
+                    <label for="email" data-i18n="formEmail">
+                        EMAIL *
+                    </label>
+
+                    <input
+                        id="email"
+                        name="email"
+                        type="email"
+                        required
+                        placeholder="YOUR EMAIL">
+
+                    <label for="message" data-i18n="formMessage">
+                        MESSAGE *
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="5"
+                        required
+                        placeholder="TYPE YOUR MESSAGE..."></textarea>
+
+                    <button
+                        type="submit"
+                        class="retro-button"
+                        data-i18n="transmit">
+                        TRANSMIT MESSAGE
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- MODAL -->
+    <div id="missionModal" class="modal">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <span>SYSTEM MESSAGE</span>
+
+                <button id="modalClose">X</button>
+            </div>
+
+            <div class="modal-body">
+
+                <span>> MISSION DETAILS:</span>
+
+                <h2 id="modalTitle">MISSION</h2>
+
+                <p id="modalDescription">
+                    DESCRIPTION
+                </p>
+
+                <button id="modalConfirm" class="retro-button">
+                    ACKNOWLEDGE
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div>
+            <strong>PEDRO-01</strong>
+
+            <span data-i18n="footerText">
+                DIGITAL PORTFOLIO // SYSTEM ONLINE
+            </span>
+        </div>
+
+        <div>
+            pedrofurtadocastro@icloud.com //
+            (31) 97181-9389
+        </div>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
